@@ -1833,74 +1833,122 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ProfileImage */ "./components/ProfileImage.js");
+/* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! faker */ "faker");
+/* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(faker__WEBPACK_IMPORTED_MODULE_3__);
 var _jsxFileName = "/Users/iyamus/Documents/Dev/React/200411_nextjs/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
 
 
+
 function index() {
+  const {
+    0: name,
+    1: setName
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.findName());
+  const {
+    0: avartar,
+    1: setAvatar
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(faker__WEBPACK_IMPORTED_MODULE_3___default.a.image.avatar());
+  const {
+    0: email,
+    1: setEmail
+  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(faker__WEBPACK_IMPORTED_MODULE_3___default.a.internet.email());
+
+  const generate = () => {
+    setName(faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.findName());
+    setAvatar(faker__WEBPACK_IMPORTED_MODULE_3___default.a.image.avatar());
+    setEmail(faker__WEBPACK_IMPORTED_MODULE_3___default.a.internet.email());
+  };
+
   return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("h1", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 19,
       columnNumber: 13
     }
   }, "Index"), __jsx("button", {
     className: "btn btn-primary",
+    onClick: generate,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 8,
+      lineNumber: 20,
       columnNumber: 13
     }
-  }, "Button"), __jsx("div", {
+  }, "Change"), __jsx("div", {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9,
+      lineNumber: 21,
       columnNumber: 13
     }
-  }, __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, __jsx("dl", {
+    className: "row",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10,
+      lineNumber: 23,
       columnNumber: 17
     }
-  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    size: 100,
+  }, __jsx("dt", {
+    className: "col-sm-3",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11,
-      columnNumber: 17
+      lineNumber: 24,
+      columnNumber: 21
     }
-  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    url: 'https://placeimg.com/400/400/animals',
+  }, "Avatar"), __jsx("dd", {
+    className: "col-sm-9",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12,
-      columnNumber: 17
+      lineNumber: 25,
+      columnNumber: 21
     }
-  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    size: 300,
+  }, __jsx("img", {
+    src: avartar,
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13,
-      columnNumber: 17
+      lineNumber: 25,
+      columnNumber: 46
     }
-  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    url: 'https://placeimg.com/400/400/woman',
+  })), __jsx("dt", {
+    className: "col-sm-3",
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 14,
-      columnNumber: 17
+      lineNumber: 26,
+      columnNumber: 21
     }
-  })));
+  }, "Name"), __jsx("dd", {
+    className: "col-sm-9",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27,
+      columnNumber: 21
+    }
+  }, name), __jsx("dt", {
+    className: "col-sm-3",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 28,
+      columnNumber: 21
+    }
+  }, "Email"), __jsx("dd", {
+    className: "col-sm-9",
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 29,
+      columnNumber: 21
+    }
+  }, email))));
 }
 ;
 
@@ -1915,6 +1963,17 @@ function index() {
 
 module.exports = __webpack_require__(/*! /Users/iyamus/Documents/Dev/React/200411_nextjs/pages/index.js */"./pages/index.js");
 
+
+/***/ }),
+
+/***/ "faker":
+/*!************************!*\
+  !*** external "faker" ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("faker");
 
 /***/ }),
 
