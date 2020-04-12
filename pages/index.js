@@ -1,15 +1,9 @@
 import Link from 'next/link';
-
-export default () => (
-    <>Test
-
-        <div>
-            <Link href="/playground">
-                <a>Go playground</a>
-            </Link>
-        </div>
-        <div>
-            <a href="/playground">Go playground</a>
-        </div>
-    </>
-);
+import React from 'react';
+export default function index() {
+    return (
+        <>
+            <h1>Index</h1>
+            <button className="btn btn-primary">Button</button>
+        </>);
+};
