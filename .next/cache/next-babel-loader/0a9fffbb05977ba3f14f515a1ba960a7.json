@@ -1,0 +1,1 @@
+{"ast":null,"code":"export default (() => test);","map":{"version":3,"sources":["/Users/iyamus/Documents/Dev/React/200411_nextjs/pages/index.js"],"names":["test"],"mappings":"AAAA,gBAAe,MACfA,IADA","sourcesContent":["export default ()=>(\ntest\n);"]},"metadata":{},"sourceType":"module"}
