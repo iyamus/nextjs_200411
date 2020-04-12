@@ -1,5 +1,56 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["static/development/pages/index.js"],{
 
+/***/ "./components/ProfileImage.js":
+/*!************************************!*\
+  !*** ./components/ProfileImage.js ***!
+  \************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return ProfileImage; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "/Users/iyamus/Documents/Dev/React/200411_nextjs/components/ProfileImage.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+function ProfileImage(props) {
+  console.log(props);
+
+  var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.size || 200),
+      width = _useState[0],
+      setWidth = _useState[1];
+
+  var _useState2 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.size || 200),
+      height = _useState2[0],
+      setHeight = _useState2[1];
+
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])(props.url || 'https://placeimg.com/300/300/man'),
+      url = _useState3[0],
+      setUrl = _useState3[1];
+
+  var style = {
+    display: 'inline-block',
+    width: width,
+    height: height,
+    backgroundImage: "url(".concat(url, ")"),
+    backgroundSize: 'cover',
+    borderRadius: '50%'
+  };
+  return __jsx(react__WEBPACK_IMPORTED_MODULE_0___default.a.Fragment, null, __jsx("span", {
+    style: style,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21,
+      columnNumber: 13
+    }
+  }));
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/helpers/arrayWithHoles.js":
 /*!***************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/arrayWithHoles.js ***!
@@ -4503,8 +4554,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ProfileImage */ "./components/ProfileImage.js");
 var _jsxFileName = "/Users/iyamus/Documents/Dev/React/200411_nextjs/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
+
 
 
 function index() {
@@ -4512,7 +4565,7 @@ function index() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 6,
+      lineNumber: 7,
       columnNumber: 13
     }
   }, "Index"), __jsx("button", {
@@ -4520,10 +4573,56 @@ function index() {
     __self: this,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 7,
+      lineNumber: 8,
       columnNumber: 13
     }
-  }, "Button"));
+  }, "Button"), __jsx("div", {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9,
+      columnNumber: 13
+    }
+  }, __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10,
+      columnNumber: 17
+    }
+  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 100,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11,
+      columnNumber: 17
+    }
+  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    url: 'https://placeimg.com/400/400/animals',
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12,
+      columnNumber: 17
+    }
+  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    size: 300,
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13,
+      columnNumber: 17
+    }
+  }), __jsx(_components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    url: 'https://placeimg.com/400/400/woman',
+    __self: this,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 17
+    }
+  })));
 }
 ;
 
