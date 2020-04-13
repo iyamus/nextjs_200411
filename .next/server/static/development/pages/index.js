@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -1827,7 +1827,6 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return index; });
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "react");
@@ -1835,126 +1834,157 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ProfileImage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/ProfileImage */ "./components/ProfileImage.js");
 /* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! faker */ "faker");
 /* harmony import */ var faker__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(faker__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! mobx */ "mobx");
+/* harmony import */ var mobx__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(mobx__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! mobx-react */ "mobx-react");
+/* harmony import */ var mobx_react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(mobx_react__WEBPACK_IMPORTED_MODULE_5__);
 var _jsxFileName = "/Users/iyamus/Documents/Dev/React/200411_nextjs/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
 
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
 
-function index() {
-  const {
-    0: name,
-    1: setName
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.findName());
-  const {
-    0: avartar,
-    1: setAvatar
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(faker__WEBPACK_IMPORTED_MODULE_3___default.a.image.avatar());
-  const {
-    0: email,
-    1: setEmail
-  } = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(faker__WEBPACK_IMPORTED_MODULE_3___default.a.internet.email());
 
-  const generate = () => {
-    setName(faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.findName());
-    setAvatar(faker__WEBPACK_IMPORTED_MODULE_3___default.a.image.avatar());
-    setEmail(faker__WEBPACK_IMPORTED_MODULE_3___default.a.internet.email());
-  };
 
-  return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("h1", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 19,
-      columnNumber: 13
-    }
-  }, "Index"), __jsx("button", {
-    className: "btn btn-primary",
-    onClick: generate,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20,
-      columnNumber: 13
-    }
-  }, "Change"), __jsx("div", {
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21,
-      columnNumber: 13
-    }
-  }, __jsx("dl", {
-    className: "row",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23,
-      columnNumber: 17
-    }
-  }, __jsx("dt", {
-    className: "col-sm-3",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 24,
-      columnNumber: 21
-    }
-  }, "Avatar"), __jsx("dd", {
-    className: "col-sm-9",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 21
-    }
-  }, __jsx("img", {
-    src: avartar,
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 25,
-      columnNumber: 46
-    }
-  })), __jsx("dt", {
-    className: "col-sm-3",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 26,
-      columnNumber: 21
-    }
-  }, "Name"), __jsx("dd", {
-    className: "col-sm-9",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 27,
-      columnNumber: 21
-    }
-  }, name), __jsx("dt", {
-    className: "col-sm-3",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28,
-      columnNumber: 21
-    }
-  }, "Email"), __jsx("dd", {
-    className: "col-sm-9",
-    __self: this,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29,
-      columnNumber: 21
-    }
-  }, email))));
-}
-;
+
+
+
+class Data {
+  constructor() {
+    _defineProperty(this, "avartar", faker__WEBPACK_IMPORTED_MODULE_3___default.a.image.avatar());
+
+    _defineProperty(this, "email", faker__WEBPACK_IMPORTED_MODULE_3___default.a.internet.email());
+
+    _defineProperty(this, "name", {
+      firstName: faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.firstName(),
+      lastName: faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.lastName()
+    });
+  }
+
+} // mobx 에서 observable처리 하겠다는 의미
+
+
+Object(mobx__WEBPACK_IMPORTED_MODULE_4__["decorate"])(Data, {
+  avartar: mobx__WEBPACK_IMPORTED_MODULE_4__["observable"],
+  email: mobx__WEBPACK_IMPORTED_MODULE_4__["observable"],
+  name: mobx__WEBPACK_IMPORTED_MODULE_4__["observable"]
+});
+
+class Index extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Component {
+  constructor(...args) {
+    super(...args);
+
+    _defineProperty(this, "data", new Data());
+
+    _defineProperty(this, "generate", () => {
+      this.data.email = faker__WEBPACK_IMPORTED_MODULE_3___default.a.internet.email();
+      this.data.name.firstName = faker__WEBPACK_IMPORTED_MODULE_3___default.a.name.firstName();
+      this.data.avartar = faker__WEBPACK_IMPORTED_MODULE_3___default.a.image.avatar();
+      console.log("check: ", this.data.email);
+    });
+  }
+
+  render() {
+    return __jsx(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null, __jsx("h1", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38,
+        columnNumber: 17
+      }
+    }, "Index"), __jsx("button", {
+      className: "btn btn-primary",
+      onClick: this.generate,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39,
+        columnNumber: 17
+      }
+    }, "Change"), __jsx("div", {
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 40,
+        columnNumber: 17
+      }
+    }, __jsx("dl", {
+      className: "row",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 41,
+        columnNumber: 21
+      }
+    }, __jsx("dt", {
+      className: "col-sm-3",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 42,
+        columnNumber: 25
+      }
+    }, "Avatar"), __jsx("dd", {
+      className: "col-sm-9",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 25
+      }
+    }, __jsx("img", {
+      src: this.data.avartar,
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 43,
+        columnNumber: 50
+      }
+    })), __jsx("dt", {
+      className: "col-sm-3",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44,
+        columnNumber: 25
+      }
+    }, "Name"), __jsx("dd", {
+      className: "col-sm-9",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45,
+        columnNumber: 25
+      }
+    }, this.data.name.firstName, " ", this.data.name.lastName), __jsx("dt", {
+      className: "col-sm-3",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 46,
+        columnNumber: 25
+      }
+    }, "Email"), __jsx("dd", {
+      className: "col-sm-9",
+      __self: this,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47,
+        columnNumber: 25
+      }
+    }, this.data.email))));
+  }
+
+} // observer 처리해주겠다는 의미
+
+
+Index = Object(mobx_react__WEBPACK_IMPORTED_MODULE_5__["observer"])(Index);
+/* harmony default export */ __webpack_exports__["default"] = (Index);
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -1974,6 +2004,28 @@ module.exports = __webpack_require__(/*! /Users/iyamus/Documents/Dev/React/20041
 /***/ (function(module, exports) {
 
 module.exports = require("faker");
+
+/***/ }),
+
+/***/ "mobx":
+/*!***********************!*\
+  !*** external "mobx" ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("mobx");
+
+/***/ }),
+
+/***/ "mobx-react":
+/*!*****************************!*\
+  !*** external "mobx-react" ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("mobx-react");
 
 /***/ }),
 
