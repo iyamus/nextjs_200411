@@ -1,5 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document';
 
+import Layout from '../components/Layout';
 export default class CustomerDocument extends Document {
 
     render() {
